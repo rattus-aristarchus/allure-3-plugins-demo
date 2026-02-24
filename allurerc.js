@@ -5,9 +5,9 @@ export default {
   output: "./allure-report",
   // Путь к файлу с историей
   historyPath: "./test-history/history.jsonl",
-  // Плагины
+  // Отчёты
   plugins: {
-    // Плагин для группировки по фичам
+    // Отчёт с группировкй по фичам
     "awesome-by-feature": {
       import: "@allurereport/plugin-awesome",
       options: {
@@ -16,10 +16,10 @@ export default {
         // Язык отчёта
         reportLanguage: "ru",
         // Поле, по которому группируются тесты в отчёте
-        groupBy: ["epic", "feature", "story"],
+        groupBy: ["feature"],
       },
     },
-    // Плагин для группировки по сюитам
+    // Отчёт с группировкой по сюитам
     "awesome-by-suite": {
       import: "@allurereport/plugin-awesome",
       options: {
@@ -28,7 +28,7 @@ export default {
         groupBy: ["suite"],
       },
     },
-    // Плагин для классического отображения
+    // Классический отчёт
     "classic view": {
       import: "@allurereport/plugin-classic",
       options: {
@@ -36,7 +36,7 @@ export default {
         reportLanguage: "ru",
       },
     },
-    // Плагин для отображения тестов по уровням
+    // Отчёт с группировкой по уровням
     "layer view": {
       import: "@allurereport/plugin-awesome",
       options: {
